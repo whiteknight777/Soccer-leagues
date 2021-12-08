@@ -16,9 +16,9 @@ function App() {
   return (
     <>
       <AuthenticationProvider>
-        <QueryClientProvider client={queryClient}>
-          {user === true ? <HomeNavigator /> : <AuthNavigator />}
-        </QueryClientProvider>
+        {/* <QueryClientProvider client={queryClient}> */}
+        {user === true ? <HomeNavigator /> : <AuthNavigator />}
+        {/* </QueryClientProvider> */}
       </AuthenticationProvider>
     </>
   );
