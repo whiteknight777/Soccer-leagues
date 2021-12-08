@@ -17,7 +17,7 @@ function App() {
     <>
       <AuthenticationProvider>
         <QueryClientProvider client={queryClient}>
-          {user === false ? <AuthNavigator /> : <HomeNavigator />}
+          {user === true ? <HomeNavigator /> : <AuthNavigator />}
         </QueryClientProvider>
       </AuthenticationProvider>
     </>
