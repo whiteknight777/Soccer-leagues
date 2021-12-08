@@ -8,7 +8,7 @@ export function SettingsScreen() {
   const { setUser, user } = useAuthentication();
   const logout = () => {
     setUser(false);
-    Alert.alert(`user : ${user}`);
+    // Alert.alert(`user : ${user}`);
   };
 
   return (

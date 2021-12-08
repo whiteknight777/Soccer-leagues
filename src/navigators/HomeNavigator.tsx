@@ -12,7 +12,7 @@ const { HOME_SCREEN } = AppRoutes;
 
 export function HomeNavigator() {
   return (
-    <NavigationContainer>
+    <>
       <Stack.Navigator initialRouteName={HOME_SCREEN}>
         <Stack.Screen
           name={HOME_SCREEN}
@@ -25,6 +25,6 @@ export function HomeNavigator() {
           }}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+    </>
   );
 }

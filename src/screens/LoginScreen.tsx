@@ -1,11 +1,5 @@
-import React, { Component } from "react";
-import {
-  ImageBackground,
-  Image,
-  StyleSheet,
-  ScrollView,
-  Alert,
-} from "react-native";
+import React from "react";
+import { ImageBackground, Image } from "react-native";
 import { View, TextField, Text, Button } from "react-native-ui-lib";
 import { useNavigation } from "@react-navigation/native";
 
@@ -30,7 +24,8 @@ export function LoginScreen() {
   }
 
   const navigateToTerms = () => {
-    navigation.navigate(AppRoutes.TERMS_SCREEN);
+    const { TERMS_SCREEN } = AppRoutes;
+    navigation.navigate(TERMS_SCREEN);
   };
 
   return (
@@ -89,7 +84,7 @@ export function LoginScreen() {
               text70
               placeholder="username"
               value={username}
-              onChangeText={(value) => {
+              onChangeText={(value: string) => {
                 setMessage("Bienvenue");
                 setUsername(value);
               }}
@@ -99,7 +94,7 @@ export function LoginScreen() {
               text70
               placeholder="password"
               value={password}
-              onChangeText={(value) => {
+              onChangeText={(value: string) => {
                 setMessage("Bienvenue");
                 setPassword(value);
               }}

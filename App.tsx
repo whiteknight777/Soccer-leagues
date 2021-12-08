@@ -1,27 +1,18 @@
 import React, { Component } from "react";
-import { View, TextField, Text, Button } from "react-native-ui-lib";
-import { QueryClient, QueryClientProvider } from "react-query";
 
-import {
-  AuthenticationProvider,
-  useAuthentication,
-} from "./src/context/Authentication";
-import { AuthNavigator } from "./src/navigators/AuthNavigator";
-import { HomeNavigator } from "./src/navigators/HomeNavigator";
+import { AuthenticationProvider } from "./src/context/Authentication";
+import { Navigators } from "./src/navigators/Navigators";
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
 
-function App() {
-  const { user } = useAuthentication();
-  return (
-    <>
+class App extends Component {
+  render() {
+    return (
       <AuthenticationProvider>
-        {/* <QueryClientProvider client={queryClient}> */}
-        {user === true ? <HomeNavigator /> : <AuthNavigator />}
-        {/* </QueryClientProvider> */}
+        <Navigators />
       </AuthenticationProvider>
-    </>
-  );
+    );
+  }
 }
 
 export default App;

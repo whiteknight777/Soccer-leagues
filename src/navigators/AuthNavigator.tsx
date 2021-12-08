@@ -13,7 +13,7 @@ const { TERMS_SCREEN, PRESENTATION_SCREEN } = AppRoutes;
 
 export function AuthNavigator() {
   return (
-    <NavigationContainer>
+    <>
       <Stack.Navigator initialRouteName={PRESENTATION_SCREEN}>
         <Stack.Screen
           name={PRESENTATION_SCREEN}
@@ -35,6 +35,6 @@ export function AuthNavigator() {
           }}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+    </>
   );
 }
